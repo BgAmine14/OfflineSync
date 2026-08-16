@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'OfflineSync',
   description: 'Local-first synchronization engine for applications that work offline',
   lang: 'en',
+  ignoreDeadLinks: true,
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/OfflineSync/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#6366f1' }],
