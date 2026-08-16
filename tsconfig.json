@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/storage" },
+    { "path": "packages/protocol" },
+    { "path": "packages/core" },
+    { "path": "packages/storage-sqlite" },
+    { "path": "packages/transport-http" },
+    { "path": "packages/conflict" },
+    { "path": "packages/transport-websocket" },
+    { "path": "packages/server" },
+    { "path": "packages/discovery" },
+    { "path": "packages/react" },
+    { "path": "packages/vue" },
+    { "path": "packages/electron" }
+  ]
+}
