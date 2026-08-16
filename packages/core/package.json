@@ -1,0 +1,29 @@
+{
+  "name": "@offlinesync/core",
+  "version": "0.0.0",
+  "description": "Client-side sync engine, collections, and mutation management",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@offlinesync/storage": "workspace:*",
+    "@offlinesync/protocol": "workspace:*",
+    "@offlinesync/transport-http": "workspace:*",
+    "@offlinesync/conflict": "workspace:*"
+  },
+  "devDependencies": {}
+}
