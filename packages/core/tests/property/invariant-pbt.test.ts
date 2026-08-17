@@ -100,7 +100,13 @@ describe('Property-Based Invariant Tests', () => {
             });
             await recovery.recover();
 
-            for (const mutation of mutations) {
+            // Deduplicate by ID (last write wins, matching storage behavior)
+            const uniqueMutations = new Map<string, (typeof mutations)[number]>();
+            for (const m of mutations) {
+              uniqueMutations.set(m.id, m);
+            }
+
+            for (const mutation of uniqueMutations.values()) {
               const stored = await freshStorage.get<TestMutationRecord>(
                 '__mutations__',
                 mutation.id,
@@ -161,7 +167,17 @@ describe('Property-Based Invariant Tests', () => {
             const inFlightCount = mutationSpecs.filter(
               (spec) => spec.isInFlight,
             ).length;
-            expect(result.repairs).toHaveLength(inFlightCount);
+            // Only count repairs for mutations whose final stored state was IN_FLIGHT
+            // (duplicate IDs overwrite each other, so only the last write matters)
+            const finalInFlightIds = new Set<string>();
+            for (const spec of mutationSpecs) {
+              if (spec.isInFlight) {
+                finalInFlightIds.add(spec.id);
+              } else {
+                finalInFlightIds.delete(spec.id);
+              }
+            }
+            expect(result.repairs).toHaveLength(finalInFlightIds.size);
           },
         ),
         { numRuns: 100 },
