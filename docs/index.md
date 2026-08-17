@@ -1,4 +1,3 @@
----
 layout: home
 
 hero:
@@ -14,28 +13,28 @@ hero:
       link: /api/core
 
 features:
-  - icon: \u26a1
+  - icon: "⚡"
     title: Local-First
     details: All data is stored locally first. Reads never block on the network. Your app is always fast and responsive.
-  - icon: \ud83d\udd04
+  - icon: "🔄"
     title: Offline Mutations
     details: Writes are queued durably and replayed when connectivity returns. Crash-safe atomic transactions protect every write.
-  - icon: \ud83d\udce1
+  - icon: "📡"
     title: Incremental Sync
     details: Only changed data is transmitted using cursor-based pagination. Minimal bandwidth, maximum efficiency.
-  - icon: \ud83d\udee0\ufe0f
+  - icon: "🔧"
     title: 6 Conflict Strategies
     details: Last-write-wins, server-wins, client-wins, field-merge, operation-aware, and manual — with per-collection routing.
-  - icon: \ud83d\udcf1
+  - icon: "📱"
     title: Framework Integrations
     details: First-class React hooks, Vue composables, and Electron IPC bridge. Drop-in with your existing stack.
-  - icon: \ud83d\udd12
+  - icon: "🔒"
     title: Zero Deps (Core)
     details: Core packages have zero runtime dependencies. Pure TypeScript. Works in Node.js, Bun, Deno, and browsers.
-  - icon: \ud83c\udf10
+  - icon: "🌐"
     title: LAN Discovery
     details: Pluggable peer discovery for local network synchronization. Build your own backend with the DiscoveryBackend interface.
-  - icon: \ud83d\udcca
+  - icon: "📊"
     title: 759 Tests
     details: Comprehensive test suite covering unit, integration, property-based, stress, and benchmark scenarios across 52 test files.
 ---
@@ -45,21 +44,21 @@ features:
 OfflineSync is a monorepo organized into four layers: protocol, storage, core engine, and platform integrations.
 
 ```text
-\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2574
-\u2502  Platform Integrations                                                  \u2502
-\u2502  React hooks \u00b7 Vue composables \u00b7 Electron IPC \u00b7 Discovery       \u2502
-\u255c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2564
-\u2502  Core Engine                                                        \u2502
-\u2502  SyncEngine \u00b7 Collection \u00b7 MutationQueue \u00b7 ConflictResolver        \u2502
-\u2502  RecoveryManager \u00b7 IntegrityChecker \u00b7 SyncScheduler               \u2502
-\u255c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2564
-\u2502  Transport Layer                                                    \u2502
-\u2502  transport-http (request/response) \u00b7 transport-websocket (push)       \u2502
-\u255c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2564
-\u2502  Protocol & Storage                                                \u2502
-\u2502  protocol (wire types) \u00b7 storage (interface) \u00b7 storage-sqlite          \u2502
-\u2502  conflict (strategies) \u00b7 server (ref implementation)                   \u2502
-\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518
+┌──────────────────────────────────────────────────────────────────────┐
+│  Platform Integrations                                              │
+│  React hooks · Vue composables · Electron IPC · Discovery           │
+├──────────────────────────────────────────────────────────────────────┤
+│  Core Engine                                                        │
+│  SyncEngine · Collection · MutationQueue · ConflictResolver         │
+│  RecoveryManager · IntegrityChecker · SyncScheduler                 │
+├──────────────────────────────────────────────────────────────────────┤
+│  Transport Layer                                                    │
+│  transport-http (request/response) · transport-websocket (push)     │
+├──────────────────────────────────────────────────────────────────────┤
+│  Protocol & Storage                                                 │
+│  protocol (wire types) · storage (interface) · storage-sqlite       │
+│  conflict (strategies) · server (ref implementation)                 │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 ## Quick Start
