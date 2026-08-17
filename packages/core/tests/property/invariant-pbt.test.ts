@@ -164,9 +164,6 @@ describe('Property-Based Invariant Tests', () => {
               expect(stored.data.status).toBe('PENDING');
             }
 
-            const inFlightCount = mutationSpecs.filter(
-              (spec) => spec.isInFlight,
-            ).length;
             // Only count repairs for mutations whose final stored state was IN_FLIGHT
             // (duplicate IDs overwrite each other, so only the last write matters)
             const finalInFlightIds = new Set<string>();
