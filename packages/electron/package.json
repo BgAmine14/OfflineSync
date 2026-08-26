@@ -22,7 +22,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/core": "^1.0.0"
+    "@offlinesync/core": "workspace:*"
   },
   "peerDependencies": {
     "electron": ">=22.0.0"

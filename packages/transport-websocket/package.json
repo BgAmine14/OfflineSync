@@ -22,8 +22,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/protocol": "^1.0.0",
-    "@offlinesync/transport-http": "^1.0.0"
+    "@offlinesync/protocol": "workspace:*",
+    "@offlinesync/transport-http": "workspace:*"
   },
   "devDependencies": {},
   "license": "MIT",

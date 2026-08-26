@@ -22,7 +22,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/storage": "^1.0.0",
+    "@offlinesync/storage": "workspace:*",
     "better-sqlite3": "^13.0.3",
     "uuidv7": "^1.2.1"
   },

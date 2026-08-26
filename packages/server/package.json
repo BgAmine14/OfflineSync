@@ -22,7 +22,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/protocol": "^1.0.0"
+    "@offlinesync/protocol": "workspace:*"
   },
   "devDependencies": {},
   "license": "MIT",

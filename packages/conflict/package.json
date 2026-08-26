@@ -22,7 +22,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/protocol": "^1.0.0"
+    "@offlinesync/protocol": "workspace:*"
   },
   "devDependencies": {
     "fast-check": "^4.9.0"

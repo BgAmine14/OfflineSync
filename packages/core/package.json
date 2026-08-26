@@ -22,10 +22,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/storage": "^1.0.0",
-    "@offlinesync/protocol": "^1.0.0",
-    "@offlinesync/transport-http": "^1.0.0",
-    "@offlinesync/conflict": "^1.0.0"
+    "@offlinesync/storage": "workspace:*",
+    "@offlinesync/protocol": "workspace:*",
+    "@offlinesync/transport-http": "workspace:*",
+    "@offlinesync/conflict": "workspace:*"
   },
   "devDependencies": {},
   "license": "MIT",
