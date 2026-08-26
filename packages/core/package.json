@@ -1,6 +1,6 @@
 {
   "name": "@offlinesync/core",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Client-side sync engine, collections, and mutation management",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,7 +11,9 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
@@ -20,10 +22,28 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/storage": "workspace:*",
-    "@offlinesync/protocol": "workspace:*",
-    "@offlinesync/transport-http": "workspace:*",
-    "@offlinesync/conflict": "workspace:*"
+    "@offlinesync/storage": "^1.0.0",
+    "@offlinesync/protocol": "^1.0.0",
+    "@offlinesync/transport-http": "^1.0.0",
+    "@offlinesync/conflict": "^1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BgAmine14/OfflineSync.git",
+    "directory": "core"
+  },
+  "homepage": "https://github.com/BgAmine14/OfflineSync#readme",
+  "keywords": [
+    "offline-first",
+    "local-first",
+    "sync",
+    "offline",
+    "conflict-resolution",
+    "crdt"
+  ]
 }

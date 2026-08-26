@@ -1,6 +1,6 @@
 {
   "name": "@offlinesync/conflict",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Conflict resolution strategies for OfflineSync",
   "type": "module",
   "main": "./dist/index.js",
@@ -22,9 +22,27 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/protocol": "workspace:*"
+    "@offlinesync/protocol": "^1.0.0"
   },
   "devDependencies": {
     "fast-check": "^4.9.0"
-  }
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BgAmine14/OfflineSync.git",
+    "directory": "conflict"
+  },
+  "homepage": "https://github.com/BgAmine14/OfflineSync#readme",
+  "keywords": [
+    "offline-first",
+    "local-first",
+    "sync",
+    "offline",
+    "conflict-resolution",
+    "crdt"
+  ]
 }

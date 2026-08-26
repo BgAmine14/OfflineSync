@@ -1,6 +1,6 @@
 {
   "name": "@offlinesync/react",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "React hooks for OfflineSync",
   "type": "module",
   "main": "./dist/index.js",
@@ -22,10 +22,28 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/core": "workspace:*"
+    "@offlinesync/core": "^1.0.0"
   },
   "peerDependencies": {
     "react": ">=17.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BgAmine14/OfflineSync.git",
+    "directory": "react"
+  },
+  "homepage": "https://github.com/BgAmine14/OfflineSync#readme",
+  "keywords": [
+    "offline-first",
+    "local-first",
+    "sync",
+    "offline",
+    "conflict-resolution",
+    "crdt"
+  ]
 }

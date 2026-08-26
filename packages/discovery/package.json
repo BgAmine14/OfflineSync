@@ -1,6 +1,6 @@
 {
   "name": "@offlinesync/discovery",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Pluggable LAN peer discovery for peer-to-peer sync",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,7 +11,9 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
@@ -20,5 +22,23 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BgAmine14/OfflineSync.git",
+    "directory": "discovery"
+  },
+  "homepage": "https://github.com/BgAmine14/OfflineSync#readme",
+  "keywords": [
+    "offline-first",
+    "local-first",
+    "sync",
+    "offline",
+    "conflict-resolution",
+    "crdt"
+  ]
 }

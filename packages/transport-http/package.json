@@ -1,6 +1,6 @@
 {
   "name": "@offlinesync/transport-http",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "HTTP transport for OfflineSync sync protocol",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,7 +11,9 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
@@ -20,7 +22,25 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@offlinesync/protocol": "workspace:*"
+    "@offlinesync/protocol": "^1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BgAmine14/OfflineSync.git",
+    "directory": "transport-http"
+  },
+  "homepage": "https://github.com/BgAmine14/OfflineSync#readme",
+  "keywords": [
+    "offline-first",
+    "local-first",
+    "sync",
+    "offline",
+    "conflict-resolution",
+    "crdt"
+  ]
 }
