@@ -32,11 +32,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BgAmine14/OfflineSync.git",
-    "directory": "core"
-  },
   "homepage": "https://github.com/BgAmine14/OfflineSync#readme",
   "keywords": [
     "offline-first",
