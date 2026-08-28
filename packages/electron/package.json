@@ -1,44 +1,51 @@
 {
-  "name": "@offlinesync/electron",
-  "version": "1.0.0",
-  "description": "Electron IPC bridge for OfflineSync",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@offlinesync/core": "workspace:*"
-  },
-  "peerDependencies": {
-    "electron": ">=22.0.0"
-  },
-  "devDependencies": {},
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "homepage": "https://github.com/BgAmine14/OfflineSync#readme",
-  "keywords": [
-    "offline-first",
-    "local-first",
-    "sync",
-    "offline",
-    "conflict-resolution",
-    "crdt"
-  ]
+    "name":  "@offlinesync/electron",
+    "version":  "1.0.0",
+    "description":  "Electron IPC bridge for OfflineSync",
+    "type":  "module",
+    "main":  "./dist/index.js",
+    "types":  "./dist/index.d.ts",
+    "exports":  {
+                    ".":  {
+                              "types":  "./dist/index.d.ts",
+                              "import":  "./dist/index.js"
+                          }
+                },
+    "files":  [
+                  "dist"
+              ],
+    "scripts":  {
+                    "build":  "tsc --build",
+                    "clean":  "tsc --build --clean",
+                    "test":  "vitest run",
+                    "test:watch":  "vitest",
+                    "typecheck":  "tsc --noEmit"
+                },
+    "dependencies":  {
+                         "@offlinesync/core":  "workspace:*"
+                     },
+    "peerDependencies":  {
+                             "electron":  "\u003e=22.0.0"
+                         },
+    "devDependencies":  {
+
+                        },
+    "license":  "MIT",
+    "publishConfig":  {
+                          "access":  "public"
+                      },
+    "homepage":  "https://bgamine14.github.io/OfflineSync/",
+    "keywords":  [
+                     "offline-first",
+                     "local-first",
+                     "sync",
+                     "offline",
+                     "conflict-resolution",
+                     "crdt"
+                 ],
+    "repository":  {
+                       "url":  "https://github.com/BgAmine14/OfflineSync.git",
+                       "directory":  "packages/electron",
+                       "type":  "git"
+                   }
 }
